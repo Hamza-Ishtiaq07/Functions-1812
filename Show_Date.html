@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date and Time</title>
+    <link rel="stylesheet" href="Show_Date.css">
+    <script src="Show_Date.js"></script>
+</head>
+<body>
+
+    <div class="_main">
+        <div class="_half">
+                
+            <div class="_inner">
+                    <h3>Java Script Function</h3>
+                    <hr>
+                <table>
+                        <tr>
+                                <td class="btn_row">
+                                        <input class="submit_Button"  type="submit" onclick="showResult()" 
+                                        value="Compile Code">
+                                         
+                                </td>
+                        </tr>
+                    <tr>
+                        <td>
+                                <div class="code_display">
+                                <!-- <textarea    class="txtArea" name="" id="" cols="30" rows="10"> -->
+                                        <p class="txtArea"> 
+                                        function showResult(){ <br>
+                                            var today =  new Date();<br>
+                                            var day = today.getDate();<br>
+                                            var month = today.getMonth();<br>
+                                            var year = today.getFullYear();<br>
+                                            var hour = today.getHours();<br>
+                                            var min = today.getMinutes();<br>
+                                            var Clockk ;<br>
+                                            month = month + 1;<br>
+                                            <br>
+                                            if(min < 10){  <br>
+                                                min = "0"+min;<br>
+                                            }<br>
+                                            <br>
+                                            if(hour < 10){  <br>
+                                                hour = "0"+hour; <br>
+                                            }<br>
+                                            <br>
+                                            if(hour > 12){   <br>
+                                               hour = TrimTime(hour);<br>
+                                                Clockk = "pm";<br>
+                                            }else{<br>
+                                                Clockk = "am";<br>
+                                            }<br>
+                                            <br>
+                                            <br>
+                                        var datee  = "Current Date : "+ day+"/"+month+"/"+year;<br>
+                                        var timee  = "Current Time : "+ hour+":"+min+"  "+Clockk;<br>
+                                        document.getElementById("date").innerHTML = datee;<br>
+                                        document.getElementById("time").innerHTML = timee;<br>
+                                        }<br>
+                                        
+                                        function TrimTime(hour){<br>
+                                            var trim = hour;<br>
+                                            hour = parseInt(trim) - 12;<br>
+                                            <br>
+                                            return hour;<br>
+                                        }<br>
+                                    </p>
+                                </div>
+                                <!-- </textarea> -->
+                        </td>
+                    </tr>
+                   
+                </table>
+                
+
+            </div>
+        </div>
+        <div class="_half">
+                <div class="_inner">
+                        <h3>Result</h3>
+                        <hr>
+                    <div class="_data">
+                            <p class="result_text" id="date"></p>
+                            <br>
+                            <p class="result_text" id="time"></p>
+                    </div>
+                    
+
+                </div>
+        </div>
+    </div>
+    
+</body>
+</html>

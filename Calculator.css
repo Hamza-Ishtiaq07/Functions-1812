@@ -1,0 +1,67 @@
+body{
+    background-image:  url("background.png");
+    /* background-color: wheat; */
+    height: 100%; 
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+._main{
+    width: 1350px;
+    /* background-color: green; */
+    height: -webkit-fill-available; 
+}
+._half{
+    width: 650px;
+    background-color: white;
+    opacity: 0.8;
+    height: 700px;
+    float: left;
+    margin: 12px;
+
+}
+h3{
+    margin: 12px 0 0 0px;
+    color: black;
+    padding-top: 10px;
+    font-size: 30px;
+    text-align: -webkit-center;
+}
+.txtArea{
+
+}
+.txt{
+    margin: 12px 0 0 194px;
+    width: 240px;
+    height: 30px;
+    padding-left: 10px;
+}
+.arithimatic_Function{
+    text-align: -webkit-center;
+}
+.btn{
+    width: 40px;
+    margin: 0 5px 0 5px;
+    height: 30px;
+    border-radius: 20%;
+    font-size: 20px;
+}
+.txt2{
+    margin: 12px 0 10px 1px;
+    width: 240px;
+    height: 30px;
+    padding-left: 10px;
+}
+.result_portion{
+    text-align: -webkit-center;
+    margin: 100px 0 0 0;
+    font-size: 30px;
+}
+.code_display{
+        /* background-color: lightblue; */
+        width: auto;
+        height: 580px;
+        overflow: scroll;
+        margin: 10px 10px 0 10px;
+}

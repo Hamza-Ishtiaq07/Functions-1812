@@ -1,0 +1,31 @@
+body{
+    background-image:  url("background.png");
+    /* background-color: wheat; */
+    height: 100%; 
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.link{
+    height: 40px;
+    background: white;
+    opacity: 0.8;
+    margin: 5px 0 0 0px;
+    width: auto;
+    text-align: center;
+    color: black;
+}
+.heading{
+    color: white;
+    text-align: center;
+    font-size: 60px;
+}
+.table{
+    width: 900px;
+    margin: 0px 0 0 225px;
+}
+a{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}

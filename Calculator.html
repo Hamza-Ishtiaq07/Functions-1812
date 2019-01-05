@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <script src="Calculator.js"></script>
+</head>
+<body>
+        <div class="_main">
+    
+                <div class="_half">
+                        <h3>Java Script Function</h3>
+                        <hr>
+                        <div class="code_display">
+                        <p>
+                                var firstNum;<br>
+                                var SecondNum;<br>
+
+                                function getfirst(){<br>
+                                return document.getElementById("firstNum").value;<br>
+                                }<br>
+                                <br>
+                                function getSecond(){<br>
+                                return document.getElementById("SecondNum").value;<br>
+                                }<br>
+                                <br>
+                                <br>
+                                <strong>//Using Anonymous Paramerterized Function</strong><br> 
+                                var ad = function(x,y){return parseInt(x) + parseInt(y);}<br>
+                                <br>
+                                function add(){<br>
+                                firstNum = getfirst();<br>
+                                SecondNum = getSecond();<br>
+                                <br>
+                                var res = ad(firstNum,SecondNum);<br>
+                                <br>
+                                document.getElementById("result").innerHTML = "Answer is : "+res;<br>
+                                document.getElementById("error").innerHTML = "Add function Is perform Sucessfully";<br>
+                                }<br>
+                                <br>
+                                <strong>//Using Function Constructor</strong><br>
+                                var su = new Function("x","y","return x*y");<br>
+                                function mul(){<br>
+                                firstNum = getfirst();<br>
+                                SecondNum = getSecond();<br>
+                                <br>
+                                var res = su(firstNum,SecondNum);<br>
+                                document.getElementById("result").innerHTML = "Answer is : "+res;<br>
+                                document.getElementById("error").innerHTML = "Multiply function Is perform Sucessfully";<br>
+                                <br>
+                                }<br>
+                                <br>
+                               <strong> //Using Lambda Function</strong><br>
+                                function sub(){<br>    
+                                firstNum = getfirst();<br>
+                                SecondNum = getSecond();<br>
+                                var x = parseInt(firstNum); <br>
+                                var y = parseInt(SecondNum);<br>
+                                <br>
+                                var res  = (x,y) => x-y;<br>   
+                                document.getElementById("result").innerHTML = "Answer is : "+res(x,y);<br>
+                                document.getElementById("error").innerHTML = "Subtraction function Is perform Sucessfully";<br>
+                                <br>
+                                }<br>
+                                <br>
+                                var d = function(x,y){return parseInt(x) / parseInt(y);}<br>
+                                <br>
+                                function div(){<br>
+                                firstNum = getfirst();<br>
+                                SecondNum = getSecond();<br>
+                                var x = parseInt(firstNum); <br>
+                                var y = parseInt(SecondNum);<br>
+                                <br>
+                                var res = d(firstNum,SecondNum);<br>
+                                <br>
+                                document.getElementById("result").innerHTML = "Answer is : "+res;<br>
+                                document.getElementById("error").innerHTML = "Divide function Is perform Sucessfully";<br>
+                                }<br>
+                                <br>
+                                <br>
+                                <strong>//Square Funtion</strong><br>
+                                function sqr(){<br>
+                                        single_val = getval();<br>
+                                        var x = parseInt(single_val);<br>
+                                        <br>
+                                         x = x*x;<br>
+                                         document.getElementById("result").innerHTML = "Answer is : "+x;<br>
+                                         document.getElementById("error").innerHTML = "Square function Is perform Sucessfully";<br>
+                                    }<br>
+                                    <br>
+                                    <br>
+                                    <strong>Cube Function</strong><br>
+                                    function cube(){<br>
+                                        single_val = getval2();<br>
+                                        var x = parseInt(single_val);<br>
+                                        <br>
+                                         x = x*x*x;<br>
+                                         document.getElementById("result").innerHTML = "Answer is : "+x;<br>
+                                         document.getElementById("error").innerHTML = "Cube function Is perform Sucessfully";<br>
+                                    }<br>
+                                    <br>
+                                    <strong>Factoial Function</strong><br>
+                                    function fac() {<br>
+                                        single_val = getval();<br>
+                                        var n = parseInt(single_val);<br>
+                                        var res = factorial(n);<br>
+                                        <br>
+                                        document.getElementById("result").innerHTML = "Answer is : "+res;<br>
+                                        document.getElementById("error").innerHTML = "Factorial function Is perform Sucessfully";<br>
+                                      }<br>
+                                      <br>
+                                      <br>
+                                    var i =1;<br>
+                                    <br>
+                                    function factorial (n){<br>    
+                                        var fac = 0;<br>
+                                        fac = parseInt(n);<br>
+                                        for (i; i < n; i++) {<br>
+                                          fac = fac * (n-i);<br>
+                                        }<br>
+                                        return fac;<br>
+                                      }<br>
+                                      <br>
+                        </p>
+                </div>
+
+                </div>
+                <div class="_half">
+                    <div class="txtArea">
+                            <h3>Result</h3>
+                            <hr>
+                        <table>
+                            <tr>
+                                <td>
+                                        <input class="txt" type="text" placeholder="Type Here" id="firstNum">
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td>
+                                            <input class="txt" type="text" placeholder="Type Here" id="SecondNum">
+                                    </td>
+                            </tr>
+
+                            
+                        </table>
+                        <br>
+                                <div class="arithimatic_Function">
+                                    <button class="btn" type="submit"  onclick="add()">+</button>
+                                    
+                                    <button class="btn" type="submit"  onclick="sub()">-</button>
+                               
+                                    <button class="btn" type="submit"  onclick="mul()">*</button>
+                                
+                                    <button class="btn" type="submit"  onclick="div()">/</button>
+                                    <br>
+
+                                    <input class="txt2" type="text" placeholder="Type Here" id="val">
+                                    
+                                    <br>
+                                    <button class="btn" type="submit"  onclick="sqr()">2^</button>
+                                    
+                                    <button class="btn" type="submit"  onclick="cube()">3^</button>
+
+                                    <button class="btn" type="submit"  onclick="fac()">F</button>
+
+                                    <!-- <input class="txt2" type="text" placeholder="Type Here" id="val2"> -->
+                                    
+                                </div>                      
+                    </div>
+                    <div class="result_portion">
+                        <label id="result"></label>
+                        <br>
+                        <label id="error"></label>
+                    </div>
+                </div>
+        </div>
+    
+</body>
+</html>
